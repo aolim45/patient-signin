@@ -553,19 +553,11 @@ function validateForm() {
         valid = false;
     }
 
-    if (!validateMini()) {
-        valid = false;
-    }
-
     if (!validateLname()) {
         valid = false;
     }
 
     if (!validateDOB()) {
-        valid = false;
-    }
-
-    if (!validateSSN()) {
         valid = false;
     }
 
@@ -594,22 +586,6 @@ function validateForm() {
     }
 
     if (!validateSym()) {
-        valid = false;
-    }
-
-    if (!typeCanc()) {
-        valid = false;
-    }
-
-    if (!typeDiab()) {
-        valid = false;
-    }
-
-    if (!typeAllergy()) {
-        valid = false;
-    }
-
-    if (!typeSurg()) {
         valid = false;
     }
 
