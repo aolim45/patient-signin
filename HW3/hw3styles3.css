@@ -1,0 +1,196 @@
+ /*
+    Author: Abigail Lim
+    File: styles3.css
+    Date created: 2024-10-16
+    Date last edited: 2024-10-29
+    Purpose: Style sheet for Homework 3.
+ */
+
+/* General HTML styling */
+body {
+    background-color: rgb(219, 228, 253);
+    color: rgb(0, 0, 0);
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-weight: normal;
+    text-align: left;
+}
+
+h1 {
+    color:  rgb(219, 245, 253);
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-weight: bold;
+    text-align: center;
+}
+
+h2 {
+    color:  rgb(219, 228, 253);
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-weight: bold;
+    text-align: center;
+}
+
+#curDate {
+    color: rgb(255, 255, 255);
+    font-family: Helvetica, sans-serif;
+    font-weight: bold;
+    text-align: right;
+    vertical-align: text-bottom;
+}
+
+/* Header table styling */
+table.head, tr.head, td.head {
+    background-color: rgb(21, 75, 91);
+    /*border-radius: 25px;
+    padding: 20px;*/
+    opacity: 1;
+    table-layout: fixed;
+    text-align: center;
+    max-width: 100%;
+    width: 100%;
+}
+
+/* Form table syling */
+table.form, tr.form, td.form {
+    background-color: rgb(219, 245, 253);
+    border-radius: 25px;
+    padding: 20px;
+    opacity: 1;
+    table-layout: auto;
+    color: rgb(0, 0, 0);
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-weight: normal;
+    text-align: left;
+    vertical-align: bottom;
+    max-width: 100%;
+}
+
+Header styling 
+.header {
+    grid-area: header;
+    background-color: rgb(21, 75, 91);
+    padding: 20px;
+    text-align: center;
+} 
+
+/* Grid related items */
+ .grid-container {
+    display: grid;
+    grid-template-areas: 
+    'auto auto auto';
+    align-content: space-evenly;
+    justify-content: center;
+}
+
+/*.left, .middle, .right {
+    padding: 10px;
+}
+
+.left {
+    grid-area: left;
+}
+
+.middle {
+    grid-area: middle;
+}
+
+.right {
+    grid-area: right;
+}*/
+
+.footer {
+    grid-area: footer;
+    background-color: rgb(21, 75, 91);
+    border-radius: 25px;
+    padding: 20px;
+    color: rgb(219, 245, 253);
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-weight: bold;
+    text-align: center;
+}
+
+/* Logo styling */
+#logo {
+    align-items: baseline;
+    text-align: left;
+    height: 100px;
+    max-height: 100px;
+    width: 100px;
+    max-width: 100px;
+}
+
+/* Responsive layout */
+@media (max-width: 600px) {
+    .grid-container {
+        grid-template-areas: 
+            'header header header'
+            'auto auto auto'
+            'footer footer footer';
+    }
+}
+
+/* Allows vertical alignment for checkboxes & radios */
+ ul.b {
+    list-style-type: none;
+ }
+
+/* Styling for health scale rating */
+ .scale-score {
+    color: rgb(204, 0, 0);
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-weight: normal;
+ }
+
+ /* Styling for error messages */
+ .error {
+    color: rgb(204, 0, 0);
+    font-family: Helvetica, sans-serif;
+    font-size: 15px;
+    font-weight: bold;
+ }
+
+.pwmessage {
+    background: transparent;
+    color: rgb(204, 0, 0);
+    font-size: 20px;
+    font-family: Helvetica, sans-serif;
+    font-weight: bold;
+    padding: 20px;
+    position: fixed;
+    text-align: right;
+}
+
+/* Format for User output table */
+table.output, tr.output, td.output {
+    background-color: rgb(219, 253, 244);
+    border-radius: 25px;
+    padding: 20px;
+    color: rgb(0, 0, 0);
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    opacity: 1;
+    max-width: 100%;
+    width: 100%;
+    text-align: left;
+    vertical-align: bottom;
+}
+
+ /* Buttons styling */
+ #sub, #che {
+    background-color: rgb(219, 253, 244);
+    float: none;
+    height: 75px;
+    width: 150px;
+ }
+
+#res {
+    background-color: rgb(253, 227, 219);
+    float: none;
+    height: 75px;
+    width: 250px;
+}
+
+#contactus {
+    background-color: rgb(219, 253, 244);
+    float: none;
+    height: 75px;
+    width: 260px;
+}
