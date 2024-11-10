@@ -2,7 +2,7 @@
     Program name: hw3js.js
     Author: Abigail Lim
     Date created: 2024-10-16
-    Date last edited: 2024-10-29
+    Date last edited: 2024-11-09
     Purpose: To validate & redisplay all of the user's inputs.
 */
 
