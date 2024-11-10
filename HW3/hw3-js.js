@@ -87,7 +87,7 @@ function validateLname() {
     // Regex pattern for first and last name
     let regex = /^[A-Za-z ']+$/;
     const lnameInput = document.getElementById("lname");
-    let lname = lnameInput.value.trim;
+    let lname = lnameInput.value.trim();
 
     // First letter uppercase converter
     lname = lname.split(' ').map(word => {
