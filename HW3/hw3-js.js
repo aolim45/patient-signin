@@ -534,6 +534,105 @@ function removeCheck() {
     document.getElementById("checkInput").innerHTML = "";
 }
 
+// Alert boxes for validation displays as needed
+function showAlert() {
+    var alertBox = document.getElementById("alert-box");
+    var closeAlert = document.getElementById("close-alert");
+
+    alertBox.style.display = "block";
+    closeAlert.onclick = function () {
+        alertBox.style.display = "none";
+    }
+}
+
+// Entire form validator
+function validateForm() {
+    let valid = true;
+
+    if (!validateFname()) {
+        valid = false;
+    }
+
+    if (!validateMini()) {
+        valid = false;
+    }
+
+    if (!validateLname()) {
+        valid = false;
+    }
+
+    if (!validateDOB()) {
+        valid = false;
+    }
+
+    if (!validateSSN()) {
+        valid = false;
+    }
+
+    if (!validateAdd1()) {
+        valid = false;
+    }
+
+    if (!validateAdd2()) {
+        valid = false;
+    }
+
+    if (!validateCity()) {
+        valid = false;
+    }
+
+    if (!validateZip()) {
+        valid = false;
+    }
+
+    if (!validateEmail()) {
+        valid = false;
+    }
+
+    if (!validateTele()) {
+        valid = false;
+    }
+
+    if (!validateSym()) {
+        valid = false;
+    }
+
+    if (!typeCanc()) {
+        valid = false;
+    }
+
+    if (!typeDiab()) {
+        valid = false;
+    }
+
+    if (!typeAllergy()) {
+        valid = false;
+    }
+
+    if (!typeSurg()) {
+        valid = false;
+    }
+
+    if (!validateUser()) {
+        valid = false;
+    }
+
+    if (!validatePW()) {
+        valid = false;
+    }
+
+    if (!confirmPW()) {
+        valid = false;
+    }
+
+    if (valid) {
+        document.getElementById("sub").disabled = false;
+    }
+    else {
+        showAlert();
+    }
+}
+
 // Allows contact page to pop up when button is pressed
 function openContact() {
     window.location.assign("https://hw1patientform.w3spaces.com/homework_test/hw-contact.html")
