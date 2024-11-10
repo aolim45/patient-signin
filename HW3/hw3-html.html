@@ -749,6 +749,12 @@
         value="SUBMIT"
 >
 
+<input type="button"
+        id="val"
+        value="VALIDATE FORM"
+        onclick="validateForm()"
+>
+
 <input type="reset"
         id="res"
         value="CLEAR FORM"
@@ -796,6 +802,14 @@
 
 <!-- External JavaScript -->
 <script src="hw3-js.js"></script>
+
+<!-- Alert boxes for validation purposes as needed -->
+<div id="alert-box">
+        <div id="alert-item">
+                <h3>Please fill in the applicable missing information. Thank you!</h3>
+                        <button id="close-alert">DONE!</button>
+        </div>
+</div>
 
 </body>
 
