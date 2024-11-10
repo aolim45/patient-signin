@@ -635,5 +635,5 @@ function validateForm() {
 
 // Allows contact page to pop up when button is pressed
 function openContact() {
-    window.location.assign("https://hw1patientform.w3spaces.com/homework_test/hw-contact.html")
+    window.location.assign("https://aolim45.github.io/patient-signin/HW3/contactuspage.html")
 }
