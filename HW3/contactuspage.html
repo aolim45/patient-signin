@@ -28,8 +28,18 @@
 <table class="head">
   <tr class="head">
     <td class="head">
+      <img src="images/madmeglogo12nbg.png"
+            id="logo"
+            alt="Madrigal Medical"
+      >
+    </td>
+    
+    <td class="head">
       <h1>Thank you for choosing Madrigal Medical.</h1>
     </td>
+
+    <td class="head">   </td>
+    
   </tr>
 </table>
 
@@ -45,6 +55,10 @@
 
     <form>
 
+<table class="form"
+  <tr class="form">
+    <td class="form">
+      <p>Please state your concerns and enter your contact information so we may contact you for further details if necessary. We will address it as best as we can. Thank you!</p>
         <textarea
           id="contactbox"
           name="contactbox"
@@ -53,11 +67,89 @@
           cols="100"
           minlength="1"
           maxlength="30"
-          placeholder="Required"
+          placeholder="On Tuesday (1/1/20XX) I received care from Nurse XXX..."
           required
         >
         </textarea>
+    </td>
+    <td class="form">
+         <p><label for="fname">First Name:</label></p>
+                <input type="text"
+                        id="fname"
+                        name="fname"
+                        title="Letters, dashes, and apostrophes only please."
+                        minlength="1"
+                        maxlength="30"
+                        size="30"
+                        placeholder="Required"
+                        required
+                        onblur="validateFname()"
+                        oninput="validateFname()"
+                        onkeyup="validateFname()"
+                >
+        <span class="error" id="fnmerror"></span>
+    </td>
+  <td class="form">
+        <p><label for="lname">Last Name:</label></p>
+                <input type="text"
+                        id="lname"
+                        name="lname"
+                        title="Letters, dashes, and apostrophes only please."
+                        minlength="1"
+                        maxlength="30"
+                        size="30"
+                        placeholder="Required"
+                        required
+                        onblur="validateLname()"
+                        oninput="validateLname()"
+                        onkeyup="validateLname()"
+                >
+        <span class="error" id="lnmerror"></span>
+    </td>
+  </tr>
 
+  <tr class="form">
+
+    <td class="head">   </td>
+    
+    <td class="form">
+        <p><label for="email">E-mail:</label></p>
+                <input type="text"
+                        id="email"
+                        name="email"
+                        title="All letters should be lowercase please."
+                        maxlength="40"
+                        size="30"
+                        pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,40}$"
+                        placeholder="name@domain.tld"
+                        required
+                        onblur="validateEmail()"
+                        oninput="validateEmail()"
+                        onkeyup="validateEmail()"
+                >
+        <span class="error" id="emailerror"></span>
+     </td>
+
+     <td class="form">
+        <p><label for="tele">Phone Number:</label></p>
+                <input type="text"
+                        id="tele"
+                        name="tele"
+                        title="Numbers only please."
+                        minlength="10"
+                        maxlength="10"
+                        size="15"
+                        pattern="[0-9]{3}[0-9]{3}[0-9]{4}"
+                        placeholder="000-000-0000"
+                        required
+                        onblur="validateTele()"
+                >
+        <span class="error" id="teleerror"></span>
+     </td>
+  </tr>
+
+
+  
 <center>
 <input type="submit"
         id="sub"
@@ -65,7 +157,25 @@
 >
 </center>
 
-    </form>
+</form>
+
+<footer>
+        <div class="footer">
+                <p>
+                        Thank you for choosing Madrigal Medical to be your healthcare provider. &#128516;
+                </p>
+
+                <p>
+                        Questions or concerns? Leave us a message on this contact page or call us at &#128382
+                        <a href="tel:(719)-266-2837"><span style="color:rgb(255, 255, 255);font-weight:bold">(719)-266-2837</span></a>
+                        Feel free to let us know what we can improve or what we did well!
+
+                </p>
+        </div>
+</footer>
+
+<!-- External JavaScript -->
+<script src="hw3-js.js"></script>
 
 </body>
 
