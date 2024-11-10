@@ -69,9 +69,9 @@ function validateMini() {
     // Shows typed name with the first letter in uppercase
     minitialInput.value = minitial;
 
-    // Uppercase converter
+    /*// Uppercase converter
     minitial = minitial.toUpperCase();
-    document.getElementById("minitial").value = minitial;
+    document.getElementById("minitial").value = minitial;*/
 
     if (!regex.test(minitial)) {
         document.getElementById("miderror").innerHTML = 
