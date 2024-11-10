@@ -68,7 +68,7 @@ function validateMini() {
 
     if (!regex.test(minitial)) {
         document.getElementById("miderror").innerHTML = 
-        "Middle initial may only contain capitalized and lowercase letters.";
+        "Middle initial may only contain one capitalized letter.";
         return false;
     }
     else if (minitial.length > 1) {
