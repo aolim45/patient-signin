@@ -15,7 +15,7 @@ window.onload = function() {
 // First name validator
 function validateFname() {
     // Regex pattern for first and last name
-    let regex = /^[A-Za-z ']+$/;
+    let regex = /^[A-Za-z'-]+$/;
     const fnameInput = document.getElementById("fname");
     let fname = fnameInput.value;
 
@@ -60,7 +60,14 @@ function validateFname() {
 function validateMini() {
     // Regex pattern for mid initial
     let regex = /^[A-Z]+$/;
-    const minitial = document.getElementById("minitial").value;
+    const minitialInput = document.getElementById("minitial").value;
+    let minitial = minitialInput.value;
+
+    // First letter uppercase converter
+    minitial = minitial.toUpperCase();
+    
+    // Shows typed name with the first letter in uppercase
+    minitialInput.value = minitial;
 
     // Uppercase converter
     minitial = minitial.toUpperCase();
@@ -85,7 +92,7 @@ function validateMini() {
 // Last name validator
 function validateLname() {
     // Regex pattern for first and last name
-    let regex = /^[A-Za-z ']+$/;
+    let regex = /^[A-Za-z'-]+$/;
     const lnameInput = document.getElementById("lname");
     let lname = lnameInput.value;
 
