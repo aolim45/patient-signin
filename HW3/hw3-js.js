@@ -425,57 +425,65 @@ function validateUser() {
 }
 
 // Ensures passwords match & fulfill requirements
-function validatePW() {
-    const pwd = document.getElementById("pwd").value;
+  function validatePW() {
+    const pwd= document.getElementById("pwd").value;
     const user = document.getElementById("user").value;
 
-    // Array of password requirements
+    // Array
     const errorMessage = [];
 
-    // Password length checker
-    if (pwd.length < 8 || pwd.length > 30) {
-        errorMessage.push("Minimum password length is 8 characters and maximum is 30 characters.");
+    // Password length checkers
+    if(pwd.length < 8) {
+        errorMessage.push("Minimum password length is 8 characters.");
+    }
+    if(pwd.length > 30) {
+        errorMessage.push("Minimum password length is 30 characters.");  
     }
 
-    // Checks for capitalized and lowercase letters
-    if (!pwd.match(/[A-Z]/) || !pwd.match(/[a-z]/)) {
-        errorMessage.push("Password must contain at least one capitalized and one lowercase letter.");
+    // Checks for lowercase letters
+    if (!pwd.match(/[a-z]/)) {
+        errorMessage.push("Password must contain at least one lowercase letter.");
     }
 
-    // Checks for digits & special characters not including quotations
-    if (!pwd.match(/[0-9]/) || !pwd.match(/[!@#\^$%&*-_\\/.,+`\(\)]/)) {
-        errorMessage.push("Password must contain at least one digit and one special character (not including quotations).");
+    // Checks for uppercase letters
+    if (!pwd.match(/[A-Z]/)) {
+        errorMessage.push("Password must contain at least one uppercase letter.");
+    }
+
+    // Checks for digits
+    if (!pwd.match(/[0-9]/)) {
+        errorMessage.push("Password must contain at least one digit.");
+    }
+
+    // Checks for special characters not including quotations
+    if (!pwd.match(/[!\@#\$%&*\-_\\.+\(\)]/)) {
+        errorMessage.push("Password must contain at least one special character (not including quotations).");
     }
 
     // Prevents password and username from matching
-    if (pwd === user || pwd.includes(user)) {
+    if (pwd== user || pwd.includes(user)) {
         errorMessage.push("Password cannot be the same as username.");
     }
 
-    // Allows password requirements to display as needed
-    const pwRequirements = document.getElementById("pwRequirements");
-    pwRequirements.innerHTML = "";
-    errorMessage.forEach((message) => {
-        const listItem = document.createElement("li");
-        listItem.textContext = message;
-        pwRequirements.appendChild(listItem);
-    });
-}
+    // Allows error messages to display as needed
+    const errorContainer = document.querySelector(".pwmessage");
+    errorContainer.innerHTML = errorMessage
+    .map((message) => '<span>${message}</span></br>')
+    .join("");
+
+    }
 
 function confirmPW() {
-    const pw1 = document.getElementById("pwd").value;
-    const pw2 = document.getElementById("pwv").value;
+    pw1 = document.getElementById("pwd").value;
+    pw2 = document.getElementById("pwv").value;
 
-    if (pw1 !== pw2) {
+    if (pw1 != pwv) {
         document.getElementById("pwerror").innerHTML = 
-        "Passwords do not match. Please re-enter.";
-        document.getElementById("pwverror").innerHTML = 
         "Passwords do not match. Please re-enter.";
         return false;
     }
     else {
-        document.getElementById("pwerror").innerHTML = "";
-        document.getElementById("pwverror").innerHTML = "";
+        document.getElementById("pwerror").innerHTML = "Passwords match!";
         return true;
     }
 }
