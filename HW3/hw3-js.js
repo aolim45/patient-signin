@@ -483,7 +483,7 @@ function confirmPW() {
         return false;
     }
     else {
-        document.getElementById("pwerror").innerHTML = "Passwords match!";
+        document.getElementById("pwerror").innerHTML = "";
         return true;
     }
 }
