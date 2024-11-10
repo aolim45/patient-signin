@@ -480,10 +480,13 @@ function confirmPW() {
     if (pw1 != pwv) {
         document.getElementById("pwerror").innerHTML = 
         "Passwords do not match. Please re-enter.";
+        document.getElementById("pwverror").innerHTML = 
+        "Passwords do not match. Please re-enter.";
         return false;
     }
     else {
         document.getElementById("pwerror").innerHTML = "";
+        document.getElementById("pwverror").innerHTML = "";
         return true;
     }
 }
