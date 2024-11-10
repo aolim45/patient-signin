@@ -60,7 +60,7 @@ function validateFname() {
 function validateMini() {
     // Regex pattern for mid initial
     let regex = /^[A-Z]+$/;
-    const minitial = document.getElementById("minitial").value;
+    let minitial = document.getElementById("minitial").value;
 
     // Uppercase converter
     minitial = minitial.toUpperCase();
