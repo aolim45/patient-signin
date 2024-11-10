@@ -300,6 +300,12 @@ function validateTele() {
     const tele = teleInput.value.replace(/\D/g, "");
     // Code above removes all non-digits
 
+    if (tele == "") {
+        document.getElementById("teleerror").innerHTML =
+        "Please enter a valid 10 digit phone number.";
+        return false;
+    }
+
     if (tele.length < 5) {
         document.getElementById("teleerror").innerHTML = 
         "Please enter a valid 10 digit phone number.";
