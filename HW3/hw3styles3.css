@@ -29,6 +29,13 @@ h2 {
     text-align: center;
 }
 
+h3 {
+ color: rgb(21, 75, 91);
+ font-family: Georgia, 'Times New Roman', Times, serif;
+ font-weight: bold;
+ text-align: center;
+}
+
 #curDate {
     color: rgb(255, 255, 255);
     font-family: Helvetica, sans-serif;
