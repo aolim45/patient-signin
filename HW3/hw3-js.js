@@ -463,7 +463,7 @@ function confirmPW() {
     const pw1 = document.getElementById("pwd").value;
     const pw2 = document.getElementById("pwv").value;
 
-    if (pw1 != pw2) {
+    if (pw1 !== pw2) {
         document.getElementById("pwerror").innerHTML = 
         "Passwords do not match. Please re-enter.";
         document.getElementById("pwverror").innerHTML = 
