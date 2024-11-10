@@ -35,7 +35,7 @@ function validateFname() {
     }
     else if (!regex.test(fname)) {
         document.getElementById("fnmerror").innerHTML = 
-        "First name may only contain spaces, apostrophes, capitalized, and lowercase letters.";
+        "First name may only contain apostrophes, capitalized, and lowercase letters.";
         return false;
     }
 
@@ -112,7 +112,7 @@ function validateLname() {
     }
     else if (!regex.test(lname)) {
         document.getElementById("lnmerror").innerHTML = 
-        "First name may only contain spaces, apostrophes, capitalized, and lowercase letters.";
+        "First name may only contain apostrophes, capitalized, and lowercase letters.";
         return false;
     }
 
