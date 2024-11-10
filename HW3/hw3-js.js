@@ -42,12 +42,12 @@ function validateFname() {
     // Checks first name length
     else if (fname.length < 1) {
         document.getElementById("fnmerror").innerHTML =
-        "First name must be longer than 1 character.";
+        "First name must be longer than 1 letter.";
         return false;
     }
     else if (fname.length > 30) {
         document.getElementById("fnmerror").innerHTML =
-        "First name cannot be longer than 30 character.";
+        "First name cannot be longer than 30 letters.";
         return false;
     }
     else {
@@ -80,7 +80,7 @@ function validateMini() {
     }
     else if (minitial.length > 1) {
         document.getElementById("miderror").innerHTML =
-        "Middle initial can only be on character.";
+        "Middle initial can only be on letter.";
         return false;
     }
     else {
@@ -107,7 +107,7 @@ function validateLname() {
     // Prevents empty last name textbox
     if (lname == "") {
         document.getElementById("lnmerror").innerHTML =
-        "Please enter patient's first name.";
+        "Please enter patient's last name.";
         return false;
     }
     else if (!regex.test(lname)) {
@@ -119,12 +119,12 @@ function validateLname() {
     // Checks last name length
     else if (lname.length < 1) {
         document.getElementById("lnmerror").innerHTML =
-        "First name must be longer than 1 character.";
+        "First name must be longer than 1 letter.";
         return false;
     }
     else if (lname.length > 30) {
         document.getElementById("lnmerror").innerHTML =
-        "First name cannot be longer than 30 character.";
+        "First name cannot be longer than 30 letters.";
         return false;
     }
     else {
