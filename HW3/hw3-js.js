@@ -17,7 +17,7 @@ function validateFname() {
     // Regex pattern for first and last name
     let regex = /^[A-Za-z ']+$/;
     const fnameInput = document.getElementById("fname");
-    let fname = fnameInput.value
+    let fname = fnameInput.value.trim();
 
     // First letter uppercase converter
     fname = fname.split(' ').map(word => {
@@ -27,9 +27,27 @@ function validateFname() {
     // Shows typed name with the first letter in uppercase
     fnameInput.value = fname;
 
-    if (!regex.test(fname)) {
+    // Prevents empty first name textbox
+    if (fname == "") {
+        document.getElementById("fnmerror").innerHTML =
+        "Please enter patient's first name.";
+        return false;
+    }
+    else if (!regex.test(fname)) {
         document.getElementById("fnmerror").innerHTML = 
         "First name may only contain spaces, apostrophes, capitalized, and lowercase letters.";
+        return false;
+    }
+
+    // Checks first name length
+    else if (fname.length < 1) {
+        document.getElementById("fnmerror").innerHTML =
+        "First name must be longer than 1 character.";
+        return false;
+    }
+    else if (fname.length > 30) {
+        document.getElementById("fnmerror").innerHTML =
+        "First name cannot be longer than 30 character.";
         return false;
     }
     else {
@@ -41,12 +59,21 @@ function validateFname() {
 // Middle initial validator
 function validateMini() {
     // Regex pattern for mid initial
-    let regex = /^[A-Za-z]+$/;
+    let regex = /^[A-Z]+$/;
     const minitial = document.getElementById("minitial").value;
+
+    // Uppercase converter
+    minitial = minitial.toUpperCase();
+    document.getElementById("minitial").value = minitial;
 
     if (!regex.test(minitial)) {
         document.getElementById("miderror").innerHTML = 
         "Middle initial may only contain capitalized and lowercase letters.";
+        return false;
+    }
+    else if (minitial.length > 1) {
+        document.getElementById("miderror").innerHTML =
+        "Middle initial can only be on character.";
         return false;
     }
     else {
@@ -60,7 +87,7 @@ function validateLname() {
     // Regex pattern for first and last name
     let regex = /^[A-Za-z ']+$/;
     const lnameInput = document.getElementById("lname");
-    let lname = lnameInput.value
+    let lname = lnameInput.value.trim;
 
     // First letter uppercase converter
     lname = lname.split(' ').map(word => {
@@ -70,9 +97,27 @@ function validateLname() {
     // Shows typed name with the first letter in uppercase
     lnameInput.value = lname;
 
-    if (!regex.test(lname)) {
+    // Prevents empty last name textbox
+    if (lname == "") {
+        document.getElementById("lnmerror").innerHTML =
+        "Please enter patient's first name.";
+        return false;
+    }
+    else if (!regex.test(lname)) {
         document.getElementById("lnmerror").innerHTML = 
-        "Last name may only contain spaces, apostrophes, capitalized, and lowercase letters.";
+        "First name may only contain spaces, apostrophes, capitalized, and lowercase letters.";
+        return false;
+    }
+
+    // Checks last name length
+    else if (lname.length < 1) {
+        document.getElementById("lnmerror").innerHTML =
+        "First name must be longer than 1 character.";
+        return false;
+    }
+    else if (lname.length > 30) {
+        document.getElementById("lnmerror").innerHTML =
+        "First name cannot be longer than 30 character.";
         return false;
     }
     else {
