@@ -452,11 +452,14 @@ function validatePW() {
         errorMessage.push("Password cannot be the same as username.");
     }
 
-    // Allows error messages to display as needed
-    const errorContainer = document.querySelector(".pwmessage");
-    errorContainer.innerHTML = errorMessage
-    .map((message) => `<span>${message}</span><br>`)
-    .join("");
+    // Allows password requirements to display as needed
+    const pwRequirements = document.getElementById("pwRequirements");
+    pwRequirements.innerHTML = "";
+    errorMessage.forEach((message) => {
+        const listItem = document.createElement("li");
+        listItem.textContext = message;
+        pwRequirements.appendChild(listItem);
+    });
 }
 
 function confirmPW() {
