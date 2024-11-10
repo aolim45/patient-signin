@@ -460,8 +460,8 @@ function validatePW() {
 }
 
 function confirmPW() {
-    pw1 = document.getElementById("pwd").value;
-    pw2 = document.getElementById("pwv").value;
+    const pw1 = document.getElementById("pwd").value;
+    const pw2 = document.getElementById("pwv").value;
 
     if (pw1 != pw2) {
         document.getElementById("pwerror").innerHTML = 
