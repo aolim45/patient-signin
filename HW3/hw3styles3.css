@@ -29,6 +29,13 @@ h2 {
     text-align: center;
 }
 
+h3 {
+    color: rgb(0, 0, 0);
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-weight: bold;
+    text-align: center;
+}
+
 #curDate {
     color: rgb(255, 255, 255);
     font-family: Helvetica, sans-serif;
@@ -189,6 +196,7 @@ table.output, tr.output, td.output {
     background-color: rgb(253, 227, 219);
     display: none;
     position: fixed;
+    left: 0;
     max-width: 100%;
     width: 100%;
     max-height: 100%;
