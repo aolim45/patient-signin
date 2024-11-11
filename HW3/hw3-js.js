@@ -476,50 +476,50 @@ function validateUser() {
 }
 
 // Ensures passwords match & fulfill requirements
-  function validatePW() {
-    const pw= document.getElementsByName("pw").value;
+function validatePW() {
+    const pwd = document.getElementById("pwd").value;
     const user = document.getElementById("user").value;
 
     // Array
     const errorMessage = [];
 
     // Password length checkers
-    if(pw.length < 8) {
+    if(pwd.length < 8) {
         errorMessage.push("Minimum password length is 8 characters.");
     }
-    if(pw.length > 30) {
+    if(pwd.length > 30) {
         errorMessage.push("Minimum password length is 30 characters.");  
     }
 
     // Checks for lowercase letters
-    if (!pw.match(/[a-z]/)) {
+    if (!pwd.match(/[a-z]/)) {
         errorMessage.push("Password must contain at least one lowercase letter.");
     }
 
     // Checks for uppercase letters
-    if (!pw.match(/[A-Z]/)) {
+    if (!pwd.match(/[A-Z]/)) {
         errorMessage.push("Password must contain at least one uppercase letter.");
     }
 
     // Checks for digits
-    if (!pw.match(/[0-9]/)) {
+    if (!pwd.match(/[0-9]/)) {
         errorMessage.push("Password must contain at least one digit.");
     }
 
     // Checks for special characters not including quotations
-    if (!pw.match(/[!\@#\$%&*\-_\\.+\(\)]/)) {
+    if (!pwd.match(/[!\@#\$%&*\-_\\.+\(\)]/)) {
         errorMessage.push("Password must contain at least one special character (not including quotations).");
     }
 
     // Prevents password and username from matching
-    if (pw == user || pw.includes(user)) {
+    if (pwd == user || pwd.includes(user)) {
         errorMessage.push("Password cannot be the same as username.");
     }
 
     // Allows error messages to display as needed
-    const errorContainer = document.querySelector(".pwmessage");
+    const errorContainer = document.querySelector(".pwrequires");
     errorContainer.innerHTML = errorMessage
-    .map(message => `<span>${message}</span><br>`)
+    .map((_message) => '<span>${message}</span></br>')
     .join("");
     }
 
