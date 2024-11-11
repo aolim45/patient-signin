@@ -193,8 +193,11 @@ table.output, tr.output, td.output {
 
 /* Format for alert box from form validator */
 #alertbox {
+    align-items: center;
     background-color: rgb(253, 227, 219);
-    display: none;
+    box-shadow: rgb(140, 140, 140);
+    display: flex;
+    justify-content: center;
     position: fixed;
     left: 0;
     max-width: 100%;
