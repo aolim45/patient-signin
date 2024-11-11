@@ -62,22 +62,6 @@
 <table class="form"
   <tr class="form">
     <td class="form">
-      <p>Please state your concerns and enter your contact information so we may contact you for further details if necessary. We will address it as best as we can. Thank you!</p>
-        <textarea
-          id="contactbox"
-          name="contactbox"
-          title="Please state your concerns. We will address it as best as we can. Thank you!"
-          rows="40"
-          cols="100"
-          minlength="1"
-          maxlength="30"
-          placeholder="On Tuesday (1/1/20XX) I received care from Nurse XXX..."
-          required
-        >
-        </textarea>
-    </td>
-  
-    <td class="form">
          <p><label for="fname">First Name:</label></p>
                 <input type="text"
                         id="fname"
@@ -114,9 +98,7 @@
     </td>
   </tr>
 
-  <tr class="form">
-    <td class="form">   </td>
-    
+  <tr class="form"> 
     <td class="form">
         <p><label for="email">E-mail:</label></p>
                 <input type="text"
@@ -144,13 +126,31 @@
                         minlength="10"
                         maxlength="10"
                         size="15"
-                        pattern="[0-9]{3}[0-9]{3}[0-9]{4}"
+                        pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
                         placeholder="000-000-0000"
                         required
                         onblur="validateTele()"
                 >
         <span class="error" id="teleerror"></span>
      </td>
+  </tr>
+
+  <tr class="form">
+     <td class="form">
+      <p><label for="contactbox">Please state your concerns and enter your contact information so we may contact you for further details if necessary. We will address it as best as we can. Thank you!</label></p>
+        <textarea
+          id="contactbox"
+          name="contactbox"
+          title="Please state your concerns. We will address it as best as we can. Thank you!"
+          rows="30"
+          cols="70"
+          minlength="1"
+          maxlength="30"
+          placeholder="On Tuesday (1/1/20XX) I received care from Nurse XXX..."
+          required
+        >
+        </textarea>
+    </td>
   </tr>
 </table>
 
