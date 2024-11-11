@@ -519,7 +519,7 @@ function validateUser() {
     // Allows error messages to display as needed
     const errorContainer = document.querySelector(".pwmessage");
     errorContainer.innerHTML = errorMessage
-    .map((message) => '<span>${message}</span></br>')
+    .map(message => `<span>${message}</span><br>`)
     .join("");
 
     }
