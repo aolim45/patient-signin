@@ -45,11 +45,6 @@ function validateFname() {
         "First name must be longer than 1 letter.";
         return false;
     }
-    else if (fname.length > 30) {
-        document.getElementById("fnmerror").innerHTML =
-        "First name cannot be longer than 30 letters.";
-        return false;
-    }
     else {
         document.getElementById("fnmerror").innerHTML = "";
         return true;
@@ -113,11 +108,6 @@ function validateLname() {
     else if (lname.length < 1) {
         document.getElementById("lnmerror").innerHTML =
         "First name must be longer than 1 letter.";
-        return false;
-    }
-    else if (lname.length > 30) {
-        document.getElementById("lnmerror").innerHTML =
-        "First name cannot be longer than 30 letters.";
         return false;
     }
     else {
