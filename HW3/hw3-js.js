@@ -66,11 +66,6 @@ function validateMini() {
         "Middle initial may only contain one capitalized letter.";
         return false;
     }
-    else if (minitial.length > 1) {
-        document.getElementById("miderror").innerHTML =
-        "Middle initial can only be on letter.";
-        return false;
-    }
     else {
         document.getElementById("miderror").innerHTML = "";
         return true;
