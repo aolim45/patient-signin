@@ -524,8 +524,8 @@ function validatePW() {
     }
 
 // Event listener for validatePW function
-document.getElementById("pwd").addEventListener("blur", validatePW);
-document.getElementById("pwd").addEventListener("input", validatePW);
+document.getElementById("pwd").oninput = validatePW;
+document.getElementById("pwd").onblur = validatePW;
 
 function confirmPW() {
     pw1 = document.getElementById("pwd").value;
