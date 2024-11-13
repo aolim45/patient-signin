@@ -509,11 +509,11 @@ function validatePW() {
     }
 
 // Event listener for validatePW function
-document.getElementById("pwd").addEventListner("input", validatePW);
+document.getElementById("pwd").addEventListener("input", validatePW);
 
 function confirmPW() {
-    pw1 = document.getElementById("pwd").value;
-    pw2 = document.getElementById("pwv").value;
+let   pw1 = document.getElementById("pwd").value;
+let   pw2 = document.getElementById("pwv").value;
 
     if (pw1 != pwv) {
         document.getElementById("pwerror").innerHTML = 
