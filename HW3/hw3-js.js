@@ -488,7 +488,7 @@ function validatePW() {
         errorMessage.push("Minimum password length is 8 characters.");
     }
     if(pwd.length > 30) {
-        errorMessage.push("Minimum password length is 30 characters.");  
+        errorMessage.push("Maximum password length is 30 characters.");  
     }
 
     // Checks for lowercase letters
@@ -522,6 +522,10 @@ function validatePW() {
     .map((message) => `<span>${message}</span><br>`)
     .join("");
     }
+
+// Event listener for validatePW function
+document.getElementById("pwd").addEventListener("blur", validatePW);
+document.getElementById("pwd").addEventListener("input", validatePW);
 
 function confirmPW() {
     pw1 = document.getElementById("pwd").value;
