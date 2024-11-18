@@ -217,7 +217,7 @@ table.output, tr.output, td.output {
 }
 
  /* Buttons styling */
-#sub, #che, #val, #close-alert {
+#sub, #che, #val {
     background-color: rgb(219, 253, 244);
     border: none;
     border-radius: 15px;
@@ -231,6 +231,21 @@ table.output, tr.output, td.output {
     text-align: center;
     text-decoration: none;
     width: 150px;
+}
+
+#close-alert {
+    background-color: rgb(219, 253, 244);
+    border-width: 1px;
+    box-shadow: 0 9px rgb(140, 140, 140);
+    cursor: pointer;
+    padding: 15px 25px;
+    font-size: 15px;
+    height: 20px;
+    width: 80px;
+    outline: none;
+    margin-top: 20px;
+    text-align: center;
+    text-decoration: none;
 }
 
 #res {
