@@ -461,39 +461,26 @@ function validateUser() {
 }
 
 // Ensures passwords match & fulfill requirements
-function validatePW() {
+  function validatePW() {
     const pwd = document.getElementById("pwd").value;
     const user = document.getElementById("user").value;
 
     // Array
     const errorMessage = [];
 
-    // Password length checkers
-    if(pwd.length < 8) {
-        errorMessage.push("Minimum password length is 8 characters.");
-    }
-    if(pwd.length > 30) {
-        errorMessage.push("Maximum password length is 30 characters.");  
+    // Password length checker
+    if(pwd.length < 8 || pwd.length > 30) {
+        errorMessage.push("Minimum password length is 8 characters and maximum is 30 characters.");
     }
 
-    // Checks for lowercase letters
-    if (!pwd.match(/[a-z]/)) {
-        errorMessage.push("Password must contain at least one lowercase letter.");
-    }
-
-    // Checks for uppercase letters
-    if (!pwd.match(/[A-Z]/)) {
-        errorMessage.push("Password must contain at least one uppercase letter.");
-    }
-
-    // Checks for digits
-    if (!pwd.match(/[0-9]/)) {
-        errorMessage.push("Password must contain at least one digit.");
+    // Checks for capitalized and lowercase letters
+    if (!pwd.match(/[A-Z]/) || !pwd.match(/[a-z]/)) {
+        errorMessage.push("Password must contain at least one capitalized and one lowercase letter.");
     }
 
     // Checks for special characters not including quotations
-    if (!pwd.match(/[!\@#\$%&*\-_\\.+\(\)]/)) {
-        errorMessage.push("Password must contain at least one special character (not including quotations).");
+    if (!pwd.match(/[0-9]/) || !pwd.match(/[!@#\^$%&*-_\\/.,+`\(\)]/)) {
+        errorMessage.push("Password must contain at least one digit and one special character (not including quotations).");
     }
 
     // Prevents password and username from matching
@@ -506,10 +493,7 @@ function validatePW() {
     errorContainer.innerHTML = errorMessage
     .map((message) => `<span>${message}</span><br>`)
     .join("");
-    }
-
-// Event listener for validatePW function
-document.getElementById("pwd").addEventListener("input", validatePW);
+}
 
 function confirmPW() {
 let   pw1 = document.getElementById("pwd").value;
