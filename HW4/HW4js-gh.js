@@ -475,7 +475,7 @@ function validateUser() {
     }
 }
 
-// Ensures passwords match & fulfill requirements
+// Password validator
 function validatePW() {
     const pwd = document.getElementById("pwd").value;
     const user = document.getElementById("user").value;
