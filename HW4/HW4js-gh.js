@@ -523,9 +523,6 @@ function validatePW() {
     .join("");
     }
 
-// For testing purposes
-console.log(document.querySelector(".pwrequires").innerHTML);
-
 function confirmPW() {
     pw1 = document.getElementById("pwd").value;
     pw2 = document.getElementById("pwv").value;
@@ -586,17 +583,6 @@ function checkInput() {
 function removeCheck() {
     document.getElementById("checkInput").innerHTML = "";
 }
-
-// Alert boxes for validation displays as needed
-/*function showAlert() {
-    var alertBox = document.getElementById("alert-box");
-    var closeAlert = document.getElementById("close-alert");
-
-    alertBox.style.display = "block";
-    closeAlert.onclick = function () {
-        alertBox.style.display = "none";
-    }
-}*/
 
 // Entire form validator
 function validateForm() {
