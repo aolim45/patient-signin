@@ -44,16 +44,21 @@ h3 {
     vertical-align: text-bottom;
 }
 
-/* Header table styling */
-table.head, tr.head, td.head {
+/* Header styling */
+.header {
+    grid-area: header;
     background-color: rgb(21, 75, 91);
-    /*border-radius: 25px;
-    padding: 20px;*/
-    opacity: 1;
-    table-layout: fixed;
+    padding: 20px;
     text-align: center;
-    max-width: 100%;
-    width: 100%;
+    top: 0;
+    transition: background-color 0.4 easy-in-out;
+    overflow: auto;
+    position: sticky;
+} 
+
+.header.scrolled {
+    background-color: rgb(21, 75, 91);
+    opacity: 1.0;;
 }
 
 /* Form table styling */
@@ -91,19 +96,22 @@ table.form, tr.form, td.form {
     justify-content: center;
 }
 
+/* Footer styling */
 .footer {
     grid-area: footer;
     background-color: rgb(21, 75, 91);
     border-radius: 25px;
     bottom: 0;
+    overflow: auto;
     padding: 20px;
+    position: fixed;
     color: rgb(219, 245, 253);
     font-family: Georgia, 'Times New Roman', Times, serif;
     font-weight: bold;
-    left: 0;
-    position: fixed;
     text-align: center;
-    width: 100%;
+    height: 10%;
+    max-height: 10%;
+    width:100%;
     max-width: 100%;
 }
 
