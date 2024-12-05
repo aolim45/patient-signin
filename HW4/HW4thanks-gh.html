@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<!--
+   Program name: hw4.html
+   Author: Abigail Lim
+   Date created: 2024-10-16
+   Date last edited: 2024-12-04
+   Version: 1.4
+   Description: Learning HTML and CSS by creating a thank you page.
+-->
+
+  <html>
+   <head>
+       <meta charset="UTF-8">
+           <title>Abi's Thank You Page</title>
+
+           <!-- External CSS style sheet -->
+           <link href="hw3styles3.css" rel="stylesheet">
+   </head>
+
+<body>
+ 
+<div class="grid.container">
+   <div class="header">
+       <table class="head">
+               <tr class="head">
+                       <td class="head">
+                               <img src="images/madmeglogo12nbg.png"
+                                       id="logo"
+                                       alt="Madrigal Medical"
+                               >
+                       </td>
+
+                       <td class="head">
+                               <h1>Thank you for your submission</h1>
+                       </td>
+                       <td class="head">   </td>
+               </tr>
+       </table> 
+   </div>
+</div>
+
+ 
+<center>
+ <img src="images/clipart-nurses.png"
+       alt="Nurses"
+       class="nurses"
+ >
+</center>
+
+
+<footer>
+     <div class="footer">
+         <h2>Please wait for your name to be called.</h2>
+               <p>
+                       Thank you for choosing Madrigal Medical to be your healthcare provider. &#128516;
+                       After completing and submitting this form, we will be with you shortly. Thank you for your patience!
+               </p>
+
+               <p>
+                       Questions or concerns? Click the button below to leave us a message or call us at &#128382
+                       <a href="tel:(719)-266-2837"><span style="color:rgb(255, 255, 255);font-weight:bold">(719)-266-2837</span></a>
+                       Feel free to let us know what we can improve or what we did well!
+
+               </p>
+       </div>
+   
+<center>
+
+<input type="button"
+       id="contactus"
+       value="MADRIGAL MEDICAL LISTENS &#128140;"
+       onclick="openContact()"
+>
+
+</center>
+
+</footer>
+
+<!-- External JavaScript -->
+<script src="hw4-js.js"></script>
+
+</body>
+</html>
