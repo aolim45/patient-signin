@@ -82,24 +82,13 @@ table.form, tr.form, td.form {
 
 /* Header styling */ 
 .header {
-    grid-area: header;
     background-color: rgb(21, 75, 91);
     padding: 20px;
     text-align: center;
 } 
 
-/* Grid related items */
- .grid-container {
-    display: grid;
-    grid-template-areas: 
-    'auto auto auto';
-    align-content: space-evenly;
-    justify-content: center;
-}
-
 /* Footer styling */
 .footer {
-    grid-area: footer;
     background-color: rgb(21, 75, 91);
     border-radius: 25px;
     bottom: 0;
@@ -124,16 +113,6 @@ table.form, tr.form, td.form {
     max-height: 100px;
     width: 100px;
     max-width: 100px;
-}
-
-/* Responsive layout */
-@media (max-width: 600px) {
-    .grid-container {
-        grid-template-areas: 
-            'header header header'
-            'auto auto auto'
-            'footer footer footer';
-    }
 }
 
 /* Allows vertical alignment for checkboxes & radios */
