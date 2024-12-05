@@ -54,6 +54,8 @@ h3 {
     transition: background-color 0.4 easy-in-out;
     overflow: auto;
     position: sticky;
+    top: 0;
+    z-index: 1000;
 } 
 
 .header.scrolled {
