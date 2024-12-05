@@ -91,22 +91,6 @@ table.form, tr.form, td.form {
     justify-content: center;
 }
 
-/*.left, .middle, .right {
-    padding: 10px;
-}
-
-.left {
-    grid-area: left;
-}
-
-.middle {
-    grid-area: middle;
-}
-
-.right {
-    grid-area: right;
-}*/
-
 .footer {
     grid-area: footer;
     background-color: rgb(21, 75, 91);
@@ -175,6 +159,7 @@ table.form, tr.form, td.form {
     font-size: 20px;
     font-family: Helvetica, sans-serif;
     font-weight: bold;
+    overflow: auto;
     padding: 20px;
     position: fixed;
     text-align: right;
