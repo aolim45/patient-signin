@@ -159,7 +159,6 @@ table.form, tr.form, td.form {
     font-size: 20px;
     font-family: Helvetica, sans-serif;
     font-weight: bold;
-    overflow: auto;
     padding: 20px;
     position: fixed;
     text-align: right;
