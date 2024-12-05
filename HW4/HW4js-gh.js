@@ -517,7 +517,7 @@ function validatePW() {
     }
 
     // Allows error messages to display as needed
-    const errorContainer = document.querySelector(".pwmessage");
+    const errorContainer = document.querySelector(".pwrequires");
     errorContainer.innerHTML = errorMessage
     .map((_message) => '<span>${message}</span></br>')
     .join("");
