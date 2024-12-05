@@ -523,6 +523,9 @@ function validatePW() {
     .join("");
     }
 
+// For testing purposes
+console.log(document.querySelector(".pwrequires").innerHTML);
+
 function confirmPW() {
     pw1 = document.getElementById("pwd").value;
     pw2 = document.getElementById("pwv").value;
