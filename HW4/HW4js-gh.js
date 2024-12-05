@@ -652,3 +652,83 @@ function validateForm() {
 function openContact() {
     window.location.assign("https://aolim45.github.io/patient-signin/HW3/contactuspage.html")
 }
+
+// Cookie for user input jar
+function setCookie(cname, cvalue, expdays) {
+    const day = new Date();
+    day.setTime(day.getTime() + (expdays*24*60*60*1000));
+    let expires = "expires=" +day.toUTCString();
+    document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
+}
+
+// Retrieves from cookie jar
+function getCookie(cname) {
+    let name = cname + "=";
+    let cookies = document.cookie.split(';');
+    
+    for (var i = 0; i < cookies.length; i++) {
+        var c = cookies[i].trim();
+        
+        while (c.charAt(0) == ' ') {
+            c = c.substring(1);
+        }
+        
+        if (c.indexOf(name) == 0) {
+            return c.substring(name.length, c.length);
+        }
+    }
+    return " ";
+}
+
+var inputs = [
+    {id: "fname", cookieName:"firstName"},
+    {id: "minitial", cookieName:"midInitial"},
+    {id: "lname", cookieName:"lastName"},
+    {id: "dob", cookieName:"dob"},
+    {id: "add1", cookieName:"address1"},
+    {id: "add2", cookieName:"address2"},
+    {id: "city", cookieName:"city"},
+    {id: "zip", cookieName:"zipCode"},
+    {id: "email", cookieName:"email"},
+    {id: "tele", cookieName:"phone"},
+    {id: "canctype", cookieName:"cancerType"},
+    {id: "diabtype", cookieName:"diabType"},
+    {id: "allergtype", cookieName:"allergType"},
+    {id: "surgtype", cookieName:"surgType"},
+    {id: "user", cookieName:"userName"}
+]
+
+inputs.forEach(function(input) {
+    var inputElement = document.getElementById(input.id);
+
+    var cookieValue = getCookie(input.cookieName);
+
+    if (cookieValue !== " ") {
+        inputElement.value = cookieValue;
+    }
+    // Code above prefills with user's previous inputs
+
+    inputElement.addEventListener("input", function() {
+        setCookie(input.cookieName, inputElement.value, 30);
+    });
+
+});
+
+// Welcomes user back!
+var firstName = getCookie("firstName");
+
+if (firstName !== " ") {
+    document.getElementById("bonjour").innerHTML = "Welcome back " + firstName
+    + "! <br>";
+
+    document.getElementById("salut").innerHTML = "<a href='#' id='new-user'>Not "
+    + firstName + "? Click HERE to start as a NEW USER. Thank you! </a>";
+
+    document.getElementById("new-user").addEventListener = ("click", function() {
+        input.forEach(function(input) {
+            setCookie(input.cookieName, "", -1);
+        });
+
+        location.reload();
+    });
+}
